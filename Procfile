@@ -1,1 +1,1 @@
-web gunicorn gauchat.wsgi:application --log-file -
+web gunicorn chatprj.wsgi:application --log-file -
