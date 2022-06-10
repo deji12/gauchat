@@ -187,7 +187,7 @@ $(document).on('click', '#search-submit', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/search/",
+        url:  "https://gaudj.herokuapp.com/search/",
         data: {
             search: $('#search-content').val(),
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -215,7 +215,7 @@ $(document).on('click', '#stat2', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/filter-task/",
+        url:  "https://gaudj.herokuapp.com/filter-task/",
         data: {
             status: document.getElementById('stat2').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -237,7 +237,7 @@ $(document).on('click', '#stat3', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/filter-task/",
+        url:  "https://gaudj.herokuapp.com/filter-task/",
         data: {
             status: document.getElementById('stat3').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -259,7 +259,7 @@ $(document).on('submit', '#note-form', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url: "http://127.0.0.1:8000/add-note/",
+        url: "https://gaudj.herokuapp.com/add-note/",
         data: {
             note_name: $('#addNoteName').val(),
             note_detail: $('#addNoteDetails').val(),
@@ -289,7 +289,7 @@ $(document).on('click', '#note-filter1', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/get-notes/",
+        url:  "https://gaudj.herokuapp.com/get-notes/",
         data: {
             status: document.getElementById('note-filter1').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -311,7 +311,7 @@ $(document).on('click', '#note-filter2', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/get-notes/",
+        url:  "https://gaudj.herokuapp.com/get-notes/",
         data: {
             status: document.getElementById('note-filter2').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -334,7 +334,7 @@ $(document).on('click', '#note-filter3', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/get-notes/",
+        url:  "https://gaudj.herokuapp.com/get-notes/",
         data: {
             status: document.getElementById('note-filter3').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -356,7 +356,7 @@ $(document).on('click', '#note-filter4', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/get-notes/",
+        url:  "https://gaudj.herokuapp.com/get-notes/",
         data: {
             status: document.getElementById('note-filter4').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -379,7 +379,7 @@ $(document).on('click', '#note-filter5', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url:  "http://127.0.0.1:8000/get-notes/",
+        url:  "https://gaudj.herokuapp.com/get-notes/",
         data: {
             status: document.getElementById('note-filter5').innerHTML,
             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -401,7 +401,7 @@ $(document).on('click', '#note-filter5', function (e) {
 //     e.preventDefault();
 //     $.ajax({
 //         type: 'POST',
-//         url:  "http://127.0.0.1:8000/search-note/",
+//         url:  "https://gaudj.herokuapp.com/search-note/",
 //         data: {
 //             search: $('#search-note-input').val(),
 //             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -423,7 +423,7 @@ $(document).on('click', '#note-filter5', function (e) {
 //     e.preventDefault();
 //     $.ajax({
 //         type: 'POST',
-//         url:  "http://127.0.0.1:8000/search-note/",
+//         url:  "https://gaudj.herokuapp.com/search-note/",
 //         data: {
 //             search: $('#search-note-input').val(),
 //             csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
@@ -447,7 +447,7 @@ document.getElementById('search-note-input').addEventListener('keypress', functi
         event.preventDefault();
         $.ajax({
             type: 'POST',
-            url:  "http://127.0.0.1:8000/search-note/",
+            url:  "https://gaudj.herokuapp.com/search-note/",
             data: {
                 search: $('#search-note-input').val(),
                 csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
