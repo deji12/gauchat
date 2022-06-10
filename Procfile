@@ -1,0 +1,1 @@
+web gunicorn gauchat.wsgi:application --log-file -
