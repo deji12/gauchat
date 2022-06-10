@@ -12,7 +12,7 @@ def AddNote(request):
     if request.method == 'POST':
         filter_notes = Note.objects.filter(title=request.POST.get('note_name'))
         if not filter_notes:
-            new_note = Note(author=get_logged_in_user, title=request.POST.get('note_name'), content=request.POST.get('note_detail'), tag=request.POST.get('tag'))
+            new_note = Note(author=get_logged_in_user, title=request.POST.get('note_name'), content=request.POST.get('note_detail'), tag=request.POST.get('tag'), div_name=f"{request.user.username}-{request.POST.get('note_name')}")
             new_note.save()
             success = '| Note Added'
             return HttpResponse(success)
