@@ -25,6 +25,7 @@ def UpdateNote(request, name):
     get_logged_in_user = User.objects.get(username=request.user.username)
     get_note = Note.objects.get(div_name=name)
     if request.method == 'POST':
+        print('came thtough ------------->>>.')
         if request.POST.get('tag_name') == 'delete':
             get_note.delete()
             success = '| Note Deleted'
@@ -45,7 +46,7 @@ def get_notes(request):
             return JsonResponse({"notes":list(get_note.values())})
           
         elif request.POST.get('status') == 'Personal':
-            get_note = Note.objects.filter(author=request.user)
+            get_note = Note.objects.filter(author=request.user, tag='Personal')
             return JsonResponse({"notes":list(get_note.values())})
 
         elif request.POST.get('status') == 'Work':
